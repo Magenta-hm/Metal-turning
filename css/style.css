@@ -334,7 +334,7 @@ img {
 }
 
 .services p {
-	margin:;
+	margin: 0;
 	margin-bottom: 20px;
 	color: #ffffff;
 	text-shadow: 1px 1px 2px rgb(19, 25, 78), 0 0 1em rgb(19, 25, 78);
@@ -351,9 +351,14 @@ img {
 	position: relative;
 
 	padding-left: 20px;
+	margin-bottom: 10px;
 
 	color: #ffffff;
 	text-shadow: 1px 1px 2px rgb(19, 25, 78), 0 0 1em rgb(19, 25, 78);
+}
+
+.services-items li:last-child {
+	margin-bottom: 0;
 }
 
 .services-items li::before {
@@ -410,7 +415,7 @@ img {
 .gallery-btn:hover:not([disabled]),
 .gallery-btn:active:not([disabled]) {
 	cursor: pointer;
-	opacity: 0.8;
+	background-image: url(../img/arrow-2-hover.svg);
 }
 
 .gallery-items {
@@ -604,21 +609,6 @@ img {
 	color: #ff0000;
 }
 
-/*.footer-contacts .button {
-	display: block;
-	margin-right: 0;
-
-	border: 2px solid #ffffff;
-	transition: all 0.3s linear;
-}
-
-.footer-contacts .button:hover,
-.footer-contacts .button:focus {
-	color: #000000;
-
-	background-color: #ffffff;
-}*/
-
 .footer-copyright {
 	max-width: 300px;
 	margin: 0;
@@ -792,6 +782,11 @@ img {
 		padding-bottom: 30px;
 	}
 
+	.wrapper,
+	.wrapper .overlay {
+		min-height: 300px;
+	}
+
 	.main-navigation {
 		padding-bottom: 0;
 	}
@@ -809,6 +804,10 @@ img {
 
 	.site-navigation li:not(:last-child) {
 		border-bottom: 1px solid #c4cbff;
+	}
+
+	.site-navigation li:not(:first-child) {
+		display: none;
 	}
 
 	.site-navigation a {
